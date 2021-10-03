@@ -18,6 +18,7 @@ const currentForecast = (latitude, longitude, callback) => {
           weather_description: data.current.weather_descriptions[0],
           temperature: data.current.temperature,
           feels_like: data.current.feelslike,
+          humidity: data.current.humidity
         });
       }
     })

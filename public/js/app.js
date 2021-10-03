@@ -26,7 +26,11 @@ weatherForm.addEventListener('submit', (event)=>{
             console.log(data.location);
             console.log(data.forecast);
             messageOne.textContent = data.location;
-            messageTwo.textContent = data.forecast.weather_description;
+
+            // for better readability
+            messageTwo.textContent = 'Weather : '+ data.forecast.weather_description;
+            messageTwo.textContent = messageTwo.textContent + '. Temperature : ' + data.forecast.temperature;
+            messageTwo.textContent = messageTwo.textContent + ' Humidity : ' + data.forecast.humidity;      
         }
         
 
